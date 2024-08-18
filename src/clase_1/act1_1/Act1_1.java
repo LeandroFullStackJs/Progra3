@@ -1,4 +1,4 @@
-package actividad1.act1_1;
+package clase_1.act1_1;
 
 import java.util.ArrayList;
 import java.util.HashMap;

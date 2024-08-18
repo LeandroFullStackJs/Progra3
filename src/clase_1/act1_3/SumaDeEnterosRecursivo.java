@@ -1,4 +1,4 @@
-package actividad1.act1_3;
+package clase_1.act1_3;
 
 public final class SumaDeEnterosRecursivo {
     public static int sumarEnterosRecursivamente(int nro) {

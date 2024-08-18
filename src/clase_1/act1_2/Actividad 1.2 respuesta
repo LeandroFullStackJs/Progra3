@@ -1,0 +1,7 @@
+Usaria el tipo long y la clase BigInteger para:
+
+    -long: emplearia este tipo de dato para cuando necesite guardar un entero que este dentro de un rango
+    entre -9,223,372,036,854,775,808 hasta 9,223,372,036,854,775,807.
+
+    -BigInteger: emplearia este objeto cuando el entero escape del rango de long debido a que es mas lento
+    manipular este objeto que un long pero la ventaja de este objeto es que posee una mayor capacidad que long.
