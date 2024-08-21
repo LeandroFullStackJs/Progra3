@@ -1,4 +1,4 @@
-package clase_1.act1_1;
+package clase1.act1_1;
 
 public class Act1_1ResultadoDTO {
 

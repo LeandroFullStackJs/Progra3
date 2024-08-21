@@ -1,4 +1,4 @@
-package clase_1.act1_2;
+package clase1.act1_2;
 
 import java.math.BigInteger;
 

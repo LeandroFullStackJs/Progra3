@@ -1,4 +1,4 @@
-package clase_1.act1_3;
+package clase1.act1_3;
 
 public class Act1_3_prueba {
     public static void main(String []args){
