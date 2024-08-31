@@ -1,6 +1,9 @@
+package Act1;
 import java.util.Arrays;
 
-public class CambioMonedas {
+
+
+class CambioMonedas {
 
     public static boolean puedeDarCambioExacto(int[] monedas, int monto) {
         // Ordenar las monedas en orden descendente
