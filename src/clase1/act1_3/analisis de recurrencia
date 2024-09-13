@@ -1,1 +1,23 @@
-Analisis: T(n) = t(0) + n.O(1)
+Caso Base:
+
+Cuando nro es 0, la función simplemente retorna 0.
+Esto toma tiempo constante, es decir, T(0) = O(1).
+
+Caso Recursivo:
+
+Para nro > 0, la función realiza una llamada recursiva a sumarEnterosRecursivamente(nro-1) y luego suma nro al resultado.
+La complejidad de esta operación es T(n) = T(n-1) + O(1).
+
+T(n) = T(n-1) + O(1) 
+ T(n-1) = T(n-2) + O(1) 
+ T(n-2) = T(n-3) + O(1)   
+ T(1) = T(0) + O(1) 
+
+Sumando todas estas ecuaciones :
+
+T(n) = T(0) + n * O(1) 
+
+Dado que ( T(0) = O(1) ), podemos simplificar:
+
+T(n) = O(1) + n * O(1)  
+T(n) = O(n) 
