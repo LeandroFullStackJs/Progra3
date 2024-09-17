@@ -57,7 +57,7 @@ public class MaximizarValorTotalPD {
 
     // Función para seleccionar Objetoes usando técnica greedy
     static Mochila seleccionGreedy(Objeto[] Objetos, int pesoTotalDeMochila) {
-        // Ordenamos los Objetoes por la relación rendimiento/costo de mayor a menor
+        // Ordenamos los Objetoes por la relación peso de mayor a menor
         Arrays.sort(Objetos, Comparator.comparingInt(j -> -j.peso));
 
         int valorTotal = 0;
