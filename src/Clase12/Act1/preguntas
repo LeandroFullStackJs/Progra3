@@ -1,0 +1,28 @@
+
+1)  Acciones posibles del atacante:
+        -DDoS
+        -Inyeccion SQL
+        -Ataque fuerza bruta
+
+2)  Herramientas/Acciones para mitigar los ataques:
+        -Monitoreo de trafico(DDos)
+        -ORM(Inyeccion SQL)
+        -Autenticacion multifactor(Fuerza bruta)
+
+3)  La poda alfa-beta se aplicaria teniendo en cuenta las posibles acciones del atacante y las acciones del sistema para
+    prevenirlas, al crear un arbol de decisiones simple en el que se evaluen las diferente acciones a tomar para cada
+    lado asignandoles un valor. Luego el sistema(Max) elegira la mejor defensa posible y se iran rotando con el
+    atacante(Min) para elegir el mejor ataque posible que seria la accion con menor valor.
+    Ejemplo con una inyeccion SQL:
+        (sistema)  Establece patrones de validación.
+        (atacante) intento de entrada no autorizada.
+        (sistema)  bloquear la solicitud.
+        Inyeccion SQL evitada, si parecen resumidas las acciones es que evite mostrar las acciones que no son optimas
+        por que serian podadas.
+
+4)  Arbol de decision simplificado:
+
+                                                                Inicio
+                                    DDos            |         Inyeccion SQL        |        Fuerza bruta
+                    Monitoreo trafico | Lo ignoro     Implemento un ORM | Ignorar       Impl AUTH multifactor | Ignorar
+    Limito el trafico de IPs | Cambio IP                                              Consigo la AUTH | Desisto
