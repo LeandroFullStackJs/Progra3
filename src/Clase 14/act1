@@ -1,0 +1,28 @@
+El Problema del Viajante es un problema de optimización donde Un viajante debe visitar una lista de ciudades, pasando por cada una exactamente una vez 
+y regresando a la ciudad de origen. El objetivo es encontrar la ruta más corta posible que le permita hacer esto. l número de posibles rutas crece exponencialmente
+con el número de ciudades, haciéndolo difícil de resolver para un gran número de ciudades.
+
+Para calcular el número de posibles rutas  para visitar 15 ciudades, se usa la fórmula para permutaciones (n−1)!
+(15 − 1)! = 14! ---> 14! = 87,178,291,200
+
+Métodos heurísticos
+Debido a que el calculo de todas las rutas posibles es inviable para un gran numero de ciudades, se usan métodos heurísticos que permiten encontrar soluciones
+"buenas" en un tiempo razonable, aunque no garanticen la ruta óptima.
+
+Método de Vecino Más Cercano:
+Selecciona siempre la ciudad más cercana a la actual para visitar a continuación. Este metodo es rápido y fácil de implementar, pero no garantiza la ruta óptima.
+
+Método de Inserción:
+Este método comienza con una subruta de pocas ciudades y va insertando gradualmente el resto en las posiciones que minimizan la longitud total de la ruta.
+
+Método de Enfriamiento Simulado:
+Está inspirado en el proceso de enfriamiento de metales, donde se busca una buena solución permitiendo algunos movimientos que empeoren temporalmente 
+la ruta, pero en última instancia guiando hacia una solución cercana a la óptima.
+
+Método de Colonia de Hormigas:
+Este enfoque se inspira en el comportamiento de las hormigas que encuentran el camino más corto hacia una fuente de alimento. Se modela el problema del TSP
+utilizando agentes que depositan "feromonas" en las rutas más cortas para guiar a otros agentes.
+
+Algoritmos Genéticos:
+Utilizan principios de evolución biológica, como selección, mutación y cruce, para buscar soluciones efectivas. La idea es "cruzar" rutas y seleccionar las
+mejores soluciones para la siguiente "generación".
