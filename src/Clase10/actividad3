@@ -1,0 +1,80 @@
+public class Actvidad3 {
+    static int N = 4;
+
+    public static void main(String[] args) {
+        resolverDisenoInteriores();
+    }
+
+    public static boolean esSeguroComputadora(int tablero[][], int fila, int col) {
+        for (int i = 0; i < N; i++) {
+            if (tablero[fila][i] == 1 || tablero[i][col] == 1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean esSeguroImpresora(int tablero[][], int fila, int col) {
+        for (int i = 0; i < N; i++) {
+            if (tablero[fila][i] == 2 || tablero[i][col] == 2) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void resolverDisenoInteriores() {
+        int[][] tablero = new int[N][N];
+        colocarComputadoras(tablero, 0, 0);
+    }
+
+    public static void colocarComputadoras(int[][] tablero, int fila, int computadorasColocadas) {
+        if (computadorasColocadas == 4) { 
+            colocarImpresoras(tablero, 0, 0, 0);
+            return;
+        }
+
+        for (int i = fila; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (esSeguroComputadora(tablero, i, j)) {
+                    tablero[i][j] = 1; // Colocar computadora
+                    colocarComputadoras(tablero, i + 1, computadorasColocadas + 1);
+                    tablero[i][j] = 0; // Retroceder (backtracking)
+                }
+            }
+        }
+    }
+
+    public static void colocarImpresoras(int[][] tablero, int fila, int col, int impresorasColocadas) {
+        if (impresorasColocadas == 4) {
+            imprimirTablero(tablero);
+            return;
+        }
+
+        for (int i = fila; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (esSeguroImpresora(tablero, i, j) && tablero[i][j] == 0) {
+                    tablero[i][j] = 2; // Colocar impresora
+                    colocarImpresoras(tablero, i, j + 1, impresorasColocadas + 1);
+                    tablero[i][j] = 0; // Retroceder (backtracking)
+                }
+            }
+        }
+    }
+
+    public static void imprimirTablero(int[][] tablero) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (tablero[i][j] == 1) {
+                    System.out.print("C "); 
+                } else if (tablero[i][j] == 2) {
+                    System.out.print("I "); 
+                } else {
+                    System.out.print(". ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+}
