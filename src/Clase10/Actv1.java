@@ -1,4 +1,4 @@
-public class Actividad1 {
+public class Actv1 {
     static int N = 4;
 
     public static void main(String[] args) {
@@ -83,4 +83,4 @@ public class Actividad1 {
             }
             System.out.println();
         }
-    }
+}

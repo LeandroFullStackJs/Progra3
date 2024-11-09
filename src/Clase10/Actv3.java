@@ -1,4 +1,4 @@
-public class Actvidad3 {
+public class Actv3 {
     static int N = 4;
 
     public static void main(String[] args) {
